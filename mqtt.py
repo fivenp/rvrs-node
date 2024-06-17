@@ -15,7 +15,7 @@ def connect_mqtt(url, user, pwd, nodeToken):
     client.tls_set(tls_version=mqtt.client.ssl.PROTOCOL_TLS)
     client.username_pw_set(user, pwd)
     client.connect(url, 8883)
-    client.subscribe('requests/'+TOKEN, qos=1)
+    client.subscribe(f"requests/{TOKEN}", qos=1)
     client.loop_forever()
 
 def on_mqtt_log(mqttc, obj, level, string):
