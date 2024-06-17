@@ -43,4 +43,4 @@ def on_mqtt_message(client, userdata, msg):
                 print("Request Target good")
                 if "requestId" in payload["data"]:
                     print("Request ID set")
-                    execute_request(API_URL,payload["data"]["requestTargetId"],payload["data"]["requestId"],payload["data"]["type"],payload["data"]["options"],payload["data"]["dest"])
+                    execute_request(API_URL,payload["requestTargetId"],payload["data"]["requestId"],payload["data"]["type"],payload["data"]["options"],payload["data"]["dest"])

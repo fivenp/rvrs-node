@@ -10,7 +10,7 @@ API_URL = "http://localhost:53805"
 if "API_URL" in os.environ:
     API_URL = os.environ['API_URL']
 
-TOKEN = uuid.UUID(int=uuid.getnode())
+TOKEN = f"{uuid.UUID(int=uuid.getnode())}"
 if "TOKEN" in os.environ:
     TOKEN = os.environ['TOKEN']
 
